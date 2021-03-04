@@ -1,10 +1,10 @@
-import {
-	Euler,
-	EventDispatcher,
-	MathUtils,
-	Quaternion,
-	Vector3
-} from '../../../build/three.module.js';
+
+import { EventDispatcher } from '../../../src/core/EventDispatcher.js';
+
+import { Euler } from '../../../src/math/Euler.js';
+import { Vector3 } from '../../../src/math/Vector3.js';
+import { MathUtils } from '../../../src/math/MathUtils.js';
+import { Quaternion } from '../../../src/math/Quaternion.js';
 
 /**
  * W3C Device Orientation control (http://w3c.github.io/deviceorientation/spec-source-orientation.html)

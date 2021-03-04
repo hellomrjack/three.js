@@ -1,67 +1,79 @@
+
+import { BufferAttribute } from '../../../src/core/BufferAttribute.js';
+import { BufferGeometry } from '../../../src/core/BufferGeometry.js';
+import { Object3D } from '../../../src/core/Object3D.js';
+import { InterleavedBufferAttribute } from '../../../src/core/InterleavedBufferAttribute.js';
+import { InterleavedBuffer } from '../../../src/core/InterleavedBuffer.js';
+
+import { Group } from '../../../src/objects/Group.js';
+import { Mesh } from '../../../src/objects/Mesh.js';
+import { Points } from '../../../src/objects/Points.js';
+import { SkinnedMesh } from '../../../src/objects/SkinnedMesh.js';
+import { Skeleton } from '../../../src/objects/Skeleton.js';
+import { Line } from '../../../src/objects/Line.js';
+import { LineLoop } from '../../../src/objects/LineLoop.js';
+import { LineSegments } from '../../../src/objects/LineSegments.js';
+import { Bone } from '../../../src/objects/Bone.js';
+
+import { Loader } from '../../../src/loaders/Loader.js';
+import { LoaderUtils } from '../../../src/loaders/LoaderUtils.js';
+import { FileLoader } from '../../../src/loaders/FileLoader.js';
+import { TextureLoader } from '../../../src/loaders/TextureLoader.js';
+import { ImageBitmapLoader } from '../../../src/loaders/ImageBitmapLoader.js';
+
+import { Material } from '../../../src/materials/Material.js';
+import { MeshBasicMaterial } from '../../../src/materials/MeshBasicMaterial';
+import { MeshPhysicalMaterial } from '../../../src/materials/MeshPhysicalMaterial';
+import { MeshStandardMaterial } from '../../../src/materials/MeshStandardMaterial';
+import { PointsMaterial } from '../../../src/materials/PointsMaterial';
+import { LineBasicMaterial } from '../../../src/materials/LineBasicMaterial';
+
+import { CanvasTexture } from '../../../src/textures/CanvasTexture.js';
+
+import { Box3 } from '../../../src/math/Box3.js';
+import { Interpolant } from '../../../src/math/Interpolant.js';
+import { Vector3 } from '../../../src/math/Vector3.js';
+import { Vector2 } from '../../../src/math/Vector2.js';
+import { Matrix4 } from '../../../src/math/Matrix4.js';
+import { MathUtils } from '../../../src/math/MathUtils.js';
+import { Sphere } from '../../../src/math/Sphere.js';
+import { Color } from '../../../src/math/Color.js';
+
+import { SpotLight } from '../../../src/lights/SpotLight.js';
+import { PointLight } from '../../../src/lights/PointLight.js';
+import { DirectionalLight } from '../../../src/lights/DirectionalLight.js';
+
+import { AnimationClip } from '../../../src/animation/AnimationClip.js';
+import { QuaternionKeyframeTrack } from '../../../src/animation/tracks/QuaternionKeyframeTrack.js';
+import { VectorKeyframeTrack } from '../../../src/animation/tracks/VectorKeyframeTrack.js';
+import { NumberKeyframeTrack } from '../../../src/animation/tracks/NumberKeyframeTrack.js';
+import { PropertyBinding } from '../../../src/animation/PropertyBinding.js';
+
+import { PerspectiveCamera } from '../../../src/cameras/PerspectiveCamera.js';
+import { OrthographicCamera } from '../../../src/cameras/OrthographicCamera.js';
+
 import {
-	AnimationClip,
-	Bone,
-	Box3,
-	BufferAttribute,
-	BufferGeometry,
-	CanvasTexture,
 	ClampToEdgeWrapping,
-	Color,
-	DirectionalLight,
 	DoubleSide,
-	FileLoader,
 	FrontSide,
-	Group,
-	ImageBitmapLoader,
-	InterleavedBuffer,
-	InterleavedBufferAttribute,
-	Interpolant,
 	InterpolateDiscrete,
 	InterpolateLinear,
-	Line,
-	LineBasicMaterial,
-	LineLoop,
-	LineSegments,
 	LinearFilter,
 	LinearMipmapLinearFilter,
 	LinearMipmapNearestFilter,
-	Loader,
-	LoaderUtils,
-	Material,
-	MathUtils,
-	Matrix4,
-	Mesh,
-	MeshBasicMaterial,
-	MeshPhysicalMaterial,
-	MeshStandardMaterial,
 	MirroredRepeatWrapping,
 	NearestFilter,
 	NearestMipmapLinearFilter,
 	NearestMipmapNearestFilter,
-	NumberKeyframeTrack,
-	Object3D,
-	OrthographicCamera,
-	PerspectiveCamera,
-	PointLight,
-	Points,
-	PointsMaterial,
-	PropertyBinding,
-	QuaternionKeyframeTrack,
 	RGBFormat,
 	RepeatWrapping,
-	Skeleton,
-	SkinnedMesh,
-	Sphere,
-	SpotLight,
 	TangentSpaceNormalMap,
-	TextureLoader,
 	TriangleFanDrawMode,
 	TriangleStripDrawMode,
-	Vector2,
-	Vector3,
-	VectorKeyframeTrack,
 	sRGBEncoding
-} from '../../../build/three.module.js';
+
+} from '../../../src/constants.js';
+
 
 var GLTFLoader = ( function () {
 

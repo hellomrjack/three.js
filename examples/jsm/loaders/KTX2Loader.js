@@ -13,14 +13,13 @@
  * - KTX: http://github.khronos.org/KTX-Specification/
  * - DFD: https://www.khronos.org/registry/DataFormat/specs/1.3/dataformat.1.3.html#basicdescriptor
  */
-
+import { FileLoader } from '../../../src/loaders/FileLoader.js';
+import { CompressedTexture } from '../../../src/textures/CompressedTexture.js';
+import { CompressedTextureLoader } from '../../../src/loaders/CompressedTextureLoader.js';
 import {
-	CompressedTexture,
-	CompressedTextureLoader,
-	FileLoader,
-	LinearEncoding,
 	sRGBEncoding,
-} from '../../../build/three.module.js';
+	LinearEncoding
+} from '../../../src/constants.js';
 
 import { BasisTextureLoader } from './BasisTextureLoader.js';
 import { ZSTDDecoder } from '../libs/zstddec.module.js';

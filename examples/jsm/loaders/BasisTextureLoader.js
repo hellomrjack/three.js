@@ -1,9 +1,8 @@
+import { CompressedTexture } from '../../../src/textures/CompressedTexture.js';
+import { FileLoader } from '../../../src/loaders/FileLoader.js';
 import {
-	CompressedTexture,
-	FileLoader,
 	LinearFilter,
 	LinearMipmapLinearFilter,
-	Loader,
 	RGBAFormat,
 	RGBA_ASTC_4x4_Format,
 	RGBA_BPTC_Format,
@@ -15,7 +14,8 @@ import {
 	RGB_PVRTC_4BPPV1_Format,
 	RGB_S3TC_DXT1_Format,
 	UnsignedByteType
-} from '../../../build/three.module.js';
+} from '../../../src/constants.js';
+import { Loader } from '../../../src/loaders/Loader.js';
 
 /**
  * Loader for Basis Universal GPU Texture Codec.
