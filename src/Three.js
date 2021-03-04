@@ -151,6 +151,10 @@ export { ImageUtils } from './extras/ImageUtils.js';
 export { ShapeUtils } from './extras/ShapeUtils.js';
 export { PMREMGenerator } from './extras/PMREMGenerator.js';
 export { WebGLUtils } from './renderers/webgl/WebGLUtils.js';
+export { KTX2Loader } from '../examples/jsm/loaders/KTX2Loader.js';
+export { GLTFLoader } from '../examples/jsm/loaders/GLTFLoader.js';
+export { DRACOLoader } from '../examples/jsm/loaders/DRACOLoader.js';
+export { DeviceOrientationControls } from '../examples/jsm/controls/DeviceOrientationControls.js';
 export * from './constants.js';
 export * from './Three.Legacy.js';
 
